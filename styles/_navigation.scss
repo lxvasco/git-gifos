@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+}
+
+
+.navigation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    border-top:5px solid var(--border-color); 
+    background-color: var(--bg-color-1);
+       
+    
+    &-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding-left: 22px;
+        padding-right: 26px;   
+        padding-top: 29px;     
+        padding-bottom: 17.2px;
+        
+    }
+
+
+    &-logo{
+        width: 48.8px;
+        height: 48.8px;    
+                
+    }
+
+    &-hambur{
+        width: 15px;
+        height: 15px;
+    }
+
+    &-column{ 
+        display: flex; 
+        flex-direction: column;            
+        overflow: hidden;    
+        transition: all 0.5s ease;
+        height: 0px;  
+        background: var(--menu-color); 
+        opacity: 0.9; 
+        position: absolute;
+        width: 100%;
+        top:95px;
+                         
+    }
+
+    &-menu{
+
+        margin:0;
+        text-align: center;
+        padding-left: 0;
+        
+    }
+
+    &-option{        
+        list-style: none; 
+       
+       
+    }
+
+    &-link{
+       
+        text-decoration: none; 
+        font-size: 15px;   
+        color: white; 
+        line-height: 4; 
+        font-family: 'Montserrat'; 
+        font-weight: 700;
+        
+         
+    }
+
+    &-link:hover{
+        text-decoration: underline var(--secondary-color);
+    }
+
+    &-option::after{
+        position: absolute;  
+        display: block;     
+        content: "";
+        height: 0.1px;
+        width:41px;
+        opacity: 0.5;
+        border: 1px solid #FFFFFF;
+        left: calc(50% - 20px);     
+        
+    }
+       
+
+}
+
+.modeDark{
+    display:none;
+    position: absolute;
+}
+
+.modeDarkText{
+    line-height: 1;
+    cursor: pointer;
+}
+  
+
+@media screen and (min-width: 930px){
+
+    .navigation{
+        flex-direction: row;
+        
+
+        &-row{
+           
+            height: 90px;
+            padding: 0;
+            padding-left:156px ;
+            
+        }
+
+        &-column{
+            position: relative;
+            height: 90px;
+            top:0px;
+            background-color: var(--bg-color-1);
+            
+            
+        }
+
+        &-hambur{
+            display:none;
+        }
+
+        &-menu{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            padding-right: 270px;
+            height: 90px;
+        }
+
+        &-option{
+            
+            padding-left: 50px;
+        }
+
+
+        &-link{
+            color:var(--primary-color);
+            font-size: 13px;
+            text-transform: uppercase;
+            line-height: 0;
+            
+        }
+    }
+
+}

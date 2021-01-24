@@ -1,0 +1,28 @@
+
+
+:root {
+    --primary-color: #572EE5;
+    --secondary-color: #50E3C2;
+    --font-color: #000000 ;
+    --bg-color-1: #fff;
+    --bg-color-2: #F3F5F8;
+    --menu-color: #572EE5;
+    --border-color:#572EE5;
+    --text-search:#6B7989;
+    
+   
+}
+
+[data-theme="dark"] {
+    --primary-color: #fff;
+    --secondary-color: #50E3C2;
+    --font-color: #fff;
+    --bg-color-1: #37383C;
+    --bg-color-2: #222326;
+    --menu-color:#000000;
+    --border-color:#000000;
+    --text-search:#6B7989;
+}
+
+
+
