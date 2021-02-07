@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
+        rel="stylesheet">
     <title>Home</title>
 </head>
 
 <body>
 
     <nav class="navigation">
-        
+
         <div class="navigation-row">
             <a href="./index.html" class=""><img src="image/logo-mobile.svg" alt="logo" class="navigation-logo"></a>
             <img class="navigation-hambur" src="./image/burger.svg" alt="Menu">
         </div>
         <div class="navigation-column">
-            <ul class="navigation-menu">                
+            <ul class="navigation-menu">
                 <input class="modeDark" type="checkbox" id="checkbox" />
-                <li class="navigation-option"><label class="theme-switch" for="checkbox"><h5 class="navigation-link modeDarkText">Modo Nocturno</h5></label></li>
+                <li class="navigation-option"><label class="theme-switch" for="checkbox">
+                        <h5 class="navigation-link modeDarkText">Modo Nocturno</h5>
+                    </label></li>
                 <li class="navigation-option"><a href="./favoritos.html" class="navigation-link">Favoritos</a></li>
                 <li class="navigation-option"><a href="./gifos.html" class="navigation-link">Mis GIFOS</a></li>
+                <li class="navigation-option"><img src="./image/button-crear-gifo.svg" alt="Crear gifo"
+                        class="navigation-btn-create"></li>
 
             </ul>
         </div>
@@ -31,21 +36,22 @@
 
     <header class="header">
         <div class="header-title">
-            <h1 class="header-title-text">Inspírate, busca,<br>guarda, y crea los <br>mejores <span class="header-title-text-gifos">GIFOS</span></h1>
+            <h1 class="header-title-text">Inspírate, busca, guarda, y crea los mejores <span
+                    class="header-title-text-gifos">GIFOS</span></h1>
         </div>
         <div class="header-ilustra">
             <img src="./image/ilustra_header.svg" alt="" class="header-img">
         </div>
         <div class="header-container">
             <div class="header-search">
-            <input type="text" class="header-search-text" placeholder="Busca GIFOS y más"> 
-            <img src="./image/icon-search.svg" alt="" class="header-search-img"> 
+                <img src="./image/icon-search.svg" alt="" class="header-search-img-hidden">
+                <input type="text" class="header-search-text" placeholder="Busca GIFOS y más">
+                <img src="./image/icon-search.svg" alt="" class="header-search-img">
             </div>
             <div class="header-container-list">
-                
-            </div>           
+
+            </div>
         </div>
-        
     </header>
 
     <section class="trending">
@@ -56,12 +62,12 @@
 
             <h2 class="trending-search-title">Busqueda</h2>
             <div class="trending-search-answer">
-                
+
             </div>
 
             <div class="header-btn">
-                <a href="" class="header-btn-more">VER MÁS</a>
-            </div>  
+                <input type="btn" class="header-btn-more" value="VER MÁS">            
+            </div>
 
         </div>
 
@@ -71,7 +77,7 @@
             <h3 class="trending-gifos-title">Trending GIFOS</h3>
             <h4 class="trending-gifos-text">Mira los últimos<br>GIFOS de nuestra comunidad.</h4>
             <div class="trending-gifos-scroll">
-                
+
             </div>
         </div>
     </section>

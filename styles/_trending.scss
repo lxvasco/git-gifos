@@ -77,6 +77,22 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+
+            &-gif{
+                width: 156px;
+                height: 120px;
+            }
+
+            &-container{
+                position: relative;
+                padding :0;
+                margin : 0.5em;
+            }
+
+            &-back{
+                position: absolute;
+                display: none;               
+            }
             
         }
 
@@ -85,9 +101,6 @@
 
    
 }
-
-
-
 
 
 
@@ -124,6 +137,40 @@
             }
 
            
+        }
+
+       &-search{
+            &-answer{
+
+                &-gif{
+                    width: 256px;
+                    height: 220px;
+                }
+
+                &-back{
+                    background-color: rgba(87,46,229,0.5);                    
+                    width: 256px;
+                    height: 220px;  
+                                     
+                    
+                }
+
+                &-container:hover{
+
+                    .trending-search-answer-back{
+                        display: block;
+                    }
+                    
+                }
+
+                &-title{
+                    font-family: "Roboto";
+                    font-size: 15px;
+                    color:#FFFFFF;
+                    position: absolute;
+                    bottom: 0.5em;
+                }
+            }
         }
     }
 }
