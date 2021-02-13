@@ -1,4 +1,5 @@
-import { connection } from './apiConexion.js'
+import { connection } from './apiConexion.js';
+import { openGif } from './btnGifs.js';
 
 const searchBar = document.querySelector('.header-search-text');
 const displaySearch = document.querySelector('.trending-search');
@@ -6,6 +7,12 @@ let containerSearch = document.querySelector(".trending-search-answer");
 let containerListAutocomplete = document.querySelector('.header-container-list');
 let iconSearch = document.querySelector('.header-search-img');
 let iconSearchHidden = document.querySelector('.header-search-img-hidden');
+let backSearchGif;
+let iconDownload;
+let iconMax;
+let iconFav;
+let titleSearchGif;
+let idGif;
 
 //EVENTOS//
 
@@ -21,6 +28,10 @@ export function searchBarSearh() {
 
 export function closeSearch() {
     iconSearch.addEventListener('click', deleteSearch);
+}
+
+function iconMaxClick() {
+    iconMax.addEventListener('click', openGif);
 }
 
 
@@ -62,21 +73,23 @@ export async function searchGifo(name, limit) {
         let containerSearchGif = document.createElement("div");
         let containerGif = document.createElement("div");
         let searchGif = document.createElement("img");
-        let backSearchGif = containerGif.cloneNode(true);
-        let iconFav = document.createElement("img");
-        let iconDownload = document.createElement("img");
-        let iconMax = document.createElement("img");
-        let titleSearchGif = document.createElement("h5");
-
+        iconFav = document.createElement("img");
+        iconDownload = document.createElement("img");
+        iconMax = document.createElement("img");
+        titleSearchGif = document.createElement("h5");
+        backSearchGif = containerGif.cloneNode(true);
+        idGif = document.createElement('p');
 
         searchGif.src = resultado.images.original.url;
         titleSearchGif.innerHTML = resultado.title;
+        idGif.innerText = resultado.id;
+        idGif.style.display="none";
 
         searchGif.className = "trending-search-answer-gif"
-        containerSearchGif.className="trending-search-answer-container"        
-        backSearchGif.className="trending-search-answer-back"
-        titleSearchGif.className="trending-search-answer-title"
-        
+        containerSearchGif.className = "trending-search-answer-container"
+        backSearchGif.className = "trending-search-answer-back"
+        titleSearchGif.className = "trending-search-answer-title"
+
         styleIcon(iconFav, "../image/icon-fav.svg");
         hoverIcon(iconFav, "../image/icon-fav-hover.svg", "../image/icon-fav.svg");
 
@@ -85,13 +98,14 @@ export async function searchGifo(name, limit) {
         hoverIcon(iconDownload, "../image/icon-download-hover.svg", "../image/icon-download.svg");
 
         styleIcon(iconMax, "../image/icon-max-normal.svg");
-        hoverIcon(iconMax, "../image/icon-max-hover.svg", "../image/icon-max-normal.svg");      
-        
+        hoverIcon(iconMax, "../image/icon-max-hover.svg", "../image/icon-max-normal.svg");
+
 
         backSearchGif.appendChild(iconFav);
         backSearchGif.appendChild(iconMax);
         backSearchGif.appendChild(iconDownload);
         backSearchGif.appendChild(titleSearchGif);
+        backSearchGif.appendChild(idGif);
 
 
         containerSearchGif.appendChild(containerGif);
@@ -100,6 +114,7 @@ export async function searchGifo(name, limit) {
         containerSearchGif.appendChild(containerGif);
         containerSearch.appendChild(containerSearchGif);
 
+        iconMaxClick();
 
     })
 

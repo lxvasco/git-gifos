@@ -5,7 +5,7 @@ import { searchGifo } from "./searchGif.js"
 import { searchBarTyping } from "./autocomplete.js"
 import { searchBarSearh } from "./searchGif.js"
 import { closeSearch } from "./searchGif.js";
-import { seeMoreClick } from "./seeMore.js"
+import { seeMoreClick } from "./seeMore.js";
 
 
 
@@ -15,7 +15,7 @@ function main() {
     searchBarSearh();
     closeSearch();
     seeMoreClick();
-
+   
 }
 
 main();

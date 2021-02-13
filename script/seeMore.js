@@ -1,17 +1,27 @@
 import { connection } from './apiConexion.js';
 import { styleIcon } from './searchGif.js';
 import { hoverIcon } from './searchGif.js';
+import { openGif } from './btnGifs.js';
 
 const seeMore = document.querySelector('.header-btn-more');
 const searchBar = document.querySelector('.header-search-text');
 let containerSearch = document.querySelector(".trending-search-answer");
 let countSeeMore = 0;
+let idGif;
+let iconDownload;
+let iconMax;
+let iconFav;
+let titleSearchGif;
 
 //EVENTOS//
 
 export function seeMoreClick() {
     seeMore.addEventListener('click', seeMoreGifs);
 };
+
+function iconMaxClick() {
+    iconMax.addEventListener('click', openGif);
+}
 
 //CALLBACK
 
@@ -31,14 +41,16 @@ async function seeMoreGifs(name, limit, offset) {
         let containerGif = document.createElement("div");
         let searchGif = document.createElement("img");
         let backSearchGif = containerGif.cloneNode(true);
-        let iconFav = document.createElement("img");
-        let iconDownload = document.createElement("img");
-        let iconMax = document.createElement("img");
-        let titleSearchGif = document.createElement("h5");
-
+        iconFav = document.createElement("img");
+        iconDownload = document.createElement("img");
+        iconMax = document.createElement("img");
+        titleSearchGif = document.createElement("h5");
+        idGif = document.createElement('p');
 
         searchGif.src = resultado.images.original.url;
         titleSearchGif.innerHTML = resultado.title;
+        idGif.innerText = resultado.id;
+        idGif.style.display="none";
 
         searchGif.className = "trending-search-answer-gif"
         containerSearchGif.className = "trending-search-answer-container"
@@ -60,13 +72,15 @@ async function seeMoreGifs(name, limit, offset) {
         backSearchGif.appendChild(iconMax);
         backSearchGif.appendChild(iconDownload);
         backSearchGif.appendChild(titleSearchGif);
-
+        backSearchGif.appendChild(idGif);
 
         containerSearchGif.appendChild(containerGif);
         containerGif.appendChild(searchGif);
         containerSearchGif.appendChild(backSearchGif);
         containerSearchGif.appendChild(containerGif);
         containerSearch.appendChild(containerSearchGif);
+
+        iconMaxClick();
 
 
     });

@@ -1,0 +1,130 @@
+.create{
+   
+    border-bottom:5px solid var(--border-color); 
+    display: none;   //al presionar el boton display:flex
+    flex-wrap: wrap;
+        
+
+    &-camera{
+        width: 10%;
+        height: 162px;
+        padding-left: 10%;
+        padding-right: 5%;
+        top:20px;
+        
+    }
+
+    &-container{
+        width: 50%;
+        height: 300px;
+        border: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title{
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: 25px;
+            color: var(--border-color);
+            text-align: center;
+            line-height: 35px;
+            max-width: 60%;            
+            margin-bottom: 0;
+        }
+
+        &-title span{
+            color: var(--secondary-color);
+        }
+
+        &-text{
+            font-family:"Roboto";
+            font-size: 16px;
+            color:var( --font-color);
+            text-align: center;
+            line-height: 29px;            
+            margin-top: 3px;
+        }
+
+    }
+
+    &-paso{
+        
+        margin-left:45% ;
+        display: flex;
+       
+
+        &-1,&-2,&-3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            width: 32px;
+            height: 32px;
+            color: var(--border-color);
+            
+        }
+    }
+
+    &-pelicula{
+        width: 12%;
+        height: 87px;
+        padding-left: 25%;
+        
+        
+    }
+
+    &-line{
+        background-color: var(--border-color);
+        width: 55%;
+        height: 5px;
+        margin-left: 22.5%;
+    }
+
+    &-btnBegin{
+        margin-left: 45%;
+        margin-right: 45%;
+        width: 10%;
+        height: 50px;        
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+        margin-top: 20px;
+        color: var(--border-color);
+        text-align: center;
+        font-family: 'Montserrat'; 
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+
+    &-footer-text{
+        font-family: "Roboto";
+        font-size: 13px;
+        color: var( --font-color);
+        letter-spacing: 0;
+        padding-left: 10%;
+    }
+
+    &-footer-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2%;
+        padding-right: 50%;
+        
+               
+    }
+
+    &-footer-media-img{
+        padding-right: 30%;
+    }
+
+    &-footer-cr{
+        font-family: "Roboto";
+        font-size: 13px;
+    }
+}
