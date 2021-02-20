@@ -448,6 +448,7 @@ body {
 
 .trending-search {
   display: none;
+  position: relative;
 }
 
 .trending-search-title {
@@ -759,8 +760,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70%;
-  margin-left: 15%;
+  width: 100%;
+  height: 100%;
   padding-bottom: 80px;
   background-color: white;
   opacity: 0.98;

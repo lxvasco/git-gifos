@@ -1,5 +1,6 @@
 import { connection } from './apiConexion.js';
 import { openGif } from './btnGifs.js';
+import { downloadGif } from './btnGifs.js';
 
 const searchBar = document.querySelector('.header-search-text');
 const displaySearch = document.querySelector('.trending-search');
@@ -32,6 +33,11 @@ export function closeSearch() {
 
 function iconMaxClick() {
     iconMax.addEventListener('click', openGif);
+}
+
+function iconDownloadClick(){
+    // const icon = document.querySelectorAll('.')
+    iconDownload.addEventListener('click', downloadGif);
 }
 
 
@@ -81,6 +87,7 @@ export async function searchGifo(name, limit) {
         idGif = document.createElement('p');
 
         searchGif.src = resultado.images.original.url;
+        backSearchGif.src = resultado.images.original.url;
         titleSearchGif.innerHTML = resultado.title;
         idGif.innerText = resultado.id;
         idGif.style.display="none";
@@ -115,6 +122,7 @@ export async function searchGifo(name, limit) {
         containerSearch.appendChild(containerSearchGif);
 
         iconMaxClick();
+        iconDownloadClick();
 
     })
 
